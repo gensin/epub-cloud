@@ -40,28 +40,32 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/list_icon"
-                android:src="@android:drawable/ic_menu_set_as"/>
+                android:src="@mipmap/ic_list"
+                android:layout_gravity="center"
+                android:contentDescription="@string/list_icon" />
 
             <Switch
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/switch1" />
+                android:id="@+id/view_switch" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/grid_icon"
-                android:src="@android:drawable/ic_menu_gallery"/>
+                android:src="@mipmap/ic_view_module"
+                android:layout_gravity="center"
+                android:contentDescription="@string/grid_icon" />
         </LinearLayout>
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageButton"
-            android:src="@android:drawable/ic_menu_sort_alphabetically"
+            android:id="@+id/sort_type"
+            android:src="@android:drawable/ic_menu_sort_by_size"
             android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/sort_type_icon" />
 
     </RelativeLayout>
 </RelativeLayout>
