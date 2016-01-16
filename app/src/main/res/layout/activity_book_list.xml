@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="es.pau.epubcloud.BookListActivity">
+    tools:context=".bookList.bookList.BookListActivity">
 
 
 
@@ -37,20 +37,22 @@
             android:orientation="horizontal"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true">
-            <Switch
-            android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/switch1"
-                />
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView" />
+                android:id="@+id/list_icon"
+                android:src="@android:drawable/ic_menu_set_as"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/switch1" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView2" />
+                android:id="@+id/grid_icon"
+                android:src="@android:drawable/ic_menu_gallery"/>
         </LinearLayout>
 
         <ImageButton
