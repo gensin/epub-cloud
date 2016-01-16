@@ -3,4 +3,5 @@
     <string name="list_icon">Lista de libros</string>
     <string name="grid_icon">Lista de portadas</string>
     <string name="sort_type_icon">TIpo de orden</string>
+    <string name="dropbox_fail">Imposible autenticar con dropbox: </string>
 </resources>
