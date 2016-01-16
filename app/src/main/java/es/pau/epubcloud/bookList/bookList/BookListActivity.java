@@ -5,7 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.GridView;
+import android.widget.ListView;
+import android.widget.Switch;
 import android.widget.Toast;
+import android.widget.ViewSwitcher;
 
 import com.dropbox.client2.DropboxAPI;
 import com.dropbox.client2.android.AndroidAuthSession;
@@ -37,6 +42,8 @@ public class BookListActivity extends AppCompatActivity {
     private boolean mLoggedIn;
 
     // Android widgets
+    private ListView epubList;
+    private GridView epubGrid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +61,32 @@ public class BookListActivity extends AppCompatActivity {
 
         //
         setContentView(R.layout.activity_book_list);
+        final ViewSwitcher vsGridList = (ViewSwitcher) findViewById(R.id.grid_list_switcher);
+        vsGridList.reset();
+        toList();
 
+        Switch swViewList = (Switch) findViewById(R.id.view_switch);
+        swViewList.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if(isChecked){
+                    vsGridList.reset();
+                    toList();
+                } else {
+                    vsGridList.getNextView();
+                    toGrid();
+                }
+            }
+        });
+
+
+    }
+
+    private void toGrid() {
+
+    }
+
+    private void toList() {
 
     }
 
